@@ -5,5 +5,6 @@ RUN cd game-of-life && mvn package
 FROM tomcat:8
 COPY --from=maven /game-of-life/gameoflife-web/target/gameoflife*.jar /usr/local tomcat/webapps/gameoflife.war
 EXPOSE 8080
-
+ENTRYPOINT ["java", "-jar" ]
+CMD [ "/gameoflife.war" ]
 
