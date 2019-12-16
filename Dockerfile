@@ -1,5 +1,5 @@
 FROM tomcat:8
-COPY target/gameoflife.war /usr/local/tomcat/webapps/
+COPY /e/practise/NARESH/game-of-life /usr/local/tomcat/webapps/
 EXPOSE 8080
 CMD [ "catalina.sh", "run" ]
 USER root
